@@ -1,0 +1,113 @@
+/* ======================
+   RESET CƠ BẢN - VŨ TRỤ
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Đổi font sang Inter hoặc Montserrat nếu có, Segoe UI vẫn ổn nhưng hơi hiền */
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+/* ======================
+   BODY - KHÔNG GIAN SÂU
+====================== */
+body {
+  /* Gradient đa tầng tạo chiều sâu như dải ngân hà */
+  background: radial-gradient(circle at center, #1e1b4b 0%, #0f172a 70%, #020617 100%);
+  background-attachment: fixed;
+  color: #e5e7eb;
+  min-height: 100vh;
+  /* Thêm một chút hạt nhiễu (noise) nhẹ nếu muốn, hoặc dùng overflow để tránh scroll ngang */
+  overflow-x: hidden;
+}
+
+/* ======================
+   ROOT / APP WRAPPER
+====================== */
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+/* ======================
+   CONTAINER CHÍNH - TRẠM VŨ TRỤ
+====================== */
+.container {
+  width: 100%;
+  max-width: 720px;
+  /* Nền kính mờ (Glassmorphism) */
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  padding: 32px;
+  border-radius: 24px;
+  /* Viền kép tạo hiệu ứng 3D */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(99, 102, 241, 0.1);
+}
+
+/* ======================
+   TIÊU ĐỀ APP - NEON TEXT
+====================== */
+.app-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  /* Chữ đổ màu Gradient */
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.5));
+}
+
+/* ======================
+   BUTTON CHUNG (Các nút điều hướng)
+====================== */
+button {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Màu xanh tím đặc trưng */
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.5);
+  filter: brightness(1.1);
+}
+
+button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  filter: grayscale(1);
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 24px 18px;
+    border-radius: 16px;
+  }
+
+  .app-title {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,62 @@
+/* ĐÁP ÁN – PHONG CÁCH VŨ TRỤ (DEEP PURPLE & NEON BLUE) */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option-btn {
+  padding: 18px 20px;
+  border-radius: 16px;
+  /* Thay đổi: Viền mờ màu tím nhạt */
+  border: 2px solid rgba(167, 139, 250, 0.2); 
+  /* Thay đổi: Gradient xanh tím sâu thẳm */
+  background: linear-gradient(
+    145deg,
+    #1e1b4b, /* Indigo cực đậm */
+    #020617  /* Đen không gian */
+  );
+  color: #f3f4f6;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Thay đổi: Glow nhẹ màu tím */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+              inset 0 0 12px rgba(139, 92, 246, 0.1);
+}
+
+/* Hover: Hiệu ứng tinh vân phát sáng */
+.option-btn:hover {
+  transform: translateY(-3px);
+  color: #ffffff;
+  border-color: #a78bfa; /* Tím sáng */
+  box-shadow: 
+    0 0 20px rgba(139, 92, 246, 0.4),
+    0 0 40px rgba(56, 189, 248, 0.2);
+}
+
+/* Đang chọn: Blue-Violet Neon */
+.option-btn.selected {
+  background: linear-gradient(135deg, #4c1d95, #2563eb);
+  color: #ffffff;
+  border-color: #818cf8;
+  box-shadow: 
+    0 0 25px rgba(129, 140, 248, 0.8),
+    inset 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Đúng: Xanh lá Emerald (giữ nguyên tinh thần nhưng làm sáng hơn) */
+.option-btn.correct-answer {
+  background: linear-gradient(135deg, #064e3b, #059669);
+  border-color: #34d399;
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.6);
+}
+
+/* Sai: Đỏ Ruby / Supernova */
+.option-btn.incorrect-answer {
+  background: linear-gradient(135deg, #7f1d1d, #dc2626);
+  border-color: #f87171;
+  box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
+}

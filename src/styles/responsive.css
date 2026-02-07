@@ -1,0 +1,38 @@
+/* ===== MOBILE (<= 480px) ===== */
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 22px;
+    border-radius: 14px;
+  }
+
+  .quiz-title {
+    font-size: 22px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .option-btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+}
+
+/* ===== TABLET (481px – 1024px) ===== */
+@media (max-width: 1024px) {
+  .quiz-container {
+    max-width: 90%;
+  }
+}
+
+/* ===== DESKTOP (>= 1200px) ===== */
+@media (min-width: 1200px) {
+  .quiz-container {
+    max-width: 800px;
+  }
+}
