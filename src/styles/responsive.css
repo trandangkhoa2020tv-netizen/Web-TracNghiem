@@ -1,38 +1,66 @@
-/* ===== MOBILE (<= 480px) ===== */
-@media (max-width: 480px) {
-  .quiz-container {
-    padding: 22px;
-    border-radius: 14px;
-  }
-
-  .quiz-title {
-    font-size: 22px;
-  }
-
-  .question {
-    font-size: 18px;
-  }
-
-  .option-btn {
-    font-size: 15px;
-    padding: 14px;
-  }
-
-  .nav-buttons {
-    flex-direction: column;
+/* ===== TABLET (481px – 1024px) ===== */
+@media (max-width: 1024px) {
+  .container { /* Đổi từ .quiz-container cho khớp với file main của bạn */
+    max-width: 90%;
+    margin: 20px auto; /* Căn giữa màn hình */
   }
 }
 
-/* ===== TABLET (481px – 1024px) ===== */
-@media (max-width: 1024px) {
-  .quiz-container {
-    max-width: 90%;
+/* ===== MOBILE (<= 480px) ===== */
+@media (max-width: 480px) {
+  #root {
+    padding: 20px 10px;
+    align-items: center; /* Đảm bảo container nằm chính giữa theo chiều dọc nếu cần */
+  }
+
+  .container {
+    padding: 24px 16px;
+    border-radius: 20px;
+    width: 95%;
+    margin: 0 auto; /* Căn giữa tuyệt đối */
+  }
+
+  .app-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .question {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  /* Tối ưu nút chọn đáp án cho ngón tay */
+  .option-btn {
+    font-size: 16px;
+    padding: 16px 18px; /* Tăng diện tích chạm */
+    border-radius: 14px;
+    margin-bottom: 4px; /* Khoảng cách giữa các nút */
+    width: 100%; /* Đảm bảo nút trải dài đều */
+    display: block;
+    text-align: left;
+  }
+
+  /* Căn chỉnh lại cụm nút điều hướng (Quay lại / Tiếp theo) */
+  .nav-buttons, .resultButtonsContainer {
+    display: flex;
+    flex-direction: column; /* Chồng hàng dọc trên mobile để nút to, dễ bấm */
+    gap: 12px;
+    width: 100%;
+  }
+
+  button {
+    width: 100%; /* Cho nút điều hướng to bằng chiều ngang màn hình */
+    padding: 15px;
+    font-size: 16px;
   }
 }
 
 /* ===== DESKTOP (>= 1200px) ===== */
 @media (min-width: 1200px) {
-  .quiz-container {
-    max-width: 800px;
+  .container {
+    max-width: 720px; /* Giữ độ rộng vừa phải để không bị loãng trên màn hình lớn */
+    margin: 60px auto;
   }
 }
