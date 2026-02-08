@@ -1,17 +1,5 @@
-version: '3.8' # Phiên bản Docker Compose
-
 services:
-  web-app:          # Tên dịch vụ thứ nhất
-    build: .        # Xây dựng từ Dockerfile trong thư mục hiện tại
+  app:
+    build: .
     ports:
-      - "8080:3000" # Map port máy khách 8080 vào port 3000 của container
-    volumes:
-      - .:/app      # Đồng bộ code từ máy ngoài vào trong container
-    depends_on:
-      - db          # Chờ db khởi động xong mới chạy web-app
-
-  db:               # Tên dịch vụ thứ hai
-    image: mysql:8.0
-    environment:
-      MYSQL_ROOT_PASSWORD: example_password
-      MYSQL_DATABASE: my_db
+      - "5173:5173"
